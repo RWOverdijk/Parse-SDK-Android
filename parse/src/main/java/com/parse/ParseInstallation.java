@@ -57,7 +57,7 @@ public class ParseInstallation extends ParseObject {
         return ParseCorePlugins.getInstance().getCurrentInstallationController();
     }
 
-    public static ParseInstallation getCurrentInstallation() {
+    public static ParseInstallation getCurrentInstallation() throws ParseException {
         return ParseTaskUtils.wait(
                 getCurrentInstallationController().getAsync());
     }
