@@ -8,7 +8,6 @@
  */
 package com.parse;
 
-import android.util.Log;
 import android.content.Context;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
