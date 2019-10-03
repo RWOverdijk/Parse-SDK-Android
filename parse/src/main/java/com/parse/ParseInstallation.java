@@ -58,17 +58,8 @@ public class ParseInstallation extends ParseObject {
     }
 
     public static ParseInstallation getCurrentInstallation() {
-        try {
-            Log.v("YOLO", "ALL GOOD");
-            return ParseTaskUtils.wait(
-                    getCurrentInstallationController().getAsync());
-
-
-        } catch (ParseException e) {
-            Log.v("YOLO", "NEUK HET SYSTEEM ALLES KAPOT JE MOEDER: " + e.getMessage());
-            // In order to have backward compatibility, we swallow the exception silently.
-            return null;
-        }
+        return ParseTaskUtils.wait(
+                getCurrentInstallationController().getAsync());
     }
 
     /**
